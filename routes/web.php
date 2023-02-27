@@ -132,13 +132,13 @@ Route::get('/', function () {
 //     return View::make('mahasiswa');
 // });
 
-Route::get('/mahasiswa',function(){
-    return view ('kampus.mahasiswa');
-});
+// Route::get('/mahasiswa',function(){
+//     return view ('kampus.mahasiswa');
+// });
 
-Route::get('/mahasiswa',function(){
-    return view ('kampus/mahasiswa');
-});
+// Route::get('/mahasiswa',function(){
+//     return view ('kampus/mahasiswa');
+// });
 
 // Route::get('/mahasiswa', function(){
 //     return view('kampus.mahasiswa',["mahasiswa01"=>"Rizki Wanda Putra"]);
@@ -154,10 +154,10 @@ Route::get('/mahasiswa',function(){
 
 // Route::get('/mahasiswa',function(){
 //     $arrMahasiswa = [
-//         "mahasiswa01"=>"Wanda",
-//         "mahasiswa02"=>"zaki",
-//         "mahasiswa03"=>"ilham",
-//         "mahasiswa04"=>"david"
+//         "mahasiswa01"=>"Wandaa",
+//         "mahasiswa02"=>"zakii",
+//         "mahasiswa03"=>"ilhamm",
+//         "mahasiswa04"=>"davidd"
 //     ];
 //     return view('kampus.mahasiswa',$arrMahasiswa);
 // });
@@ -175,3 +175,11 @@ Route::get('/mahasiswa',function(){
 //     $arrMahasiswa = ["dony salmanan","Acung","dilan","indra kenz"];
 //     return view ('kampus.mahasiswa')->with('mahasiswa',$arrMahasiswa); 
 // });
+
+Route::get('/mahasiswa', function(){
+    $mahasiswa01 = "Indra Kenz",
+    $mahasiswa02 = "Doni Salmanan",
+    $mahasiswa03 = "Atta Halilintar",
+    $mahasiswa04 = "Raffi Ahmad"
+return view('kampus.mahasiswa', compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
+});
