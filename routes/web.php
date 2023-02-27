@@ -172,7 +172,7 @@ Route::get('/', function () {
 // });
 
 // Route::get('/mahasiswa',function(){
-//     $arrMahasiswa = ["Dony salmanan","Acung","dilan","indra kenz"];
+//     $arrMahasiswa = ["dony salmanan","Acung","dilan","indra kenz"];
 //     return view ('kampus.mahasiswa')->with('mahasiswa',$arrMahasiswa); 
 // });
 
