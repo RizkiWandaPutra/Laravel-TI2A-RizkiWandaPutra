@@ -124,6 +124,7 @@ Route::get('/', function () {
 //     echo "Halaman mahasiswa andi";
 // });
 
+////merupakan view web 
 // Route::get('/home',function(){
 //     return view ('halaman_home');
 // });
@@ -176,10 +177,29 @@ Route::get('/', function () {
 //     return view ('kampus.mahasiswa')->with('mahasiswa',$arrMahasiswa); 
 // });
 
-Route::get('/mahasiswa', function(){
-    $mahasiswa01 = "Indra Kenz",
-    $mahasiswa02 = "Doni Salmanan",
-    $mahasiswa03 = "Atta Halilintar",
-    $mahasiswa04 = "Raffi Ahmad"
-return view('kampus.mahasiswa', compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
+// Route::get('/mahasiswa', function(){
+//     $mahasiswa01 = "Indra Kenz",
+//     $mahasiswa02 = "Doni Salmanan",
+//     $mahasiswa03 = "Atta Halilintar",
+//     $mahasiswa04 = "Raffi Ahmad"
+// return view('kampus.mahasiswa', compact("mahasiswa01","mahasiswa02","mahasiswa03","mahasiswa04"));
+// });
+
+//blade template
+// Route::get('/mahasiswa',function(){
+//     $nama ='Rizki Wanda Putra';
+//     $nilai = 100;
+//     return view('mahasiswa',compact('nama','nilai'));
+// });
+
+// Route::get('/mahasiswa',function(){
+//         $nama ='<u>Wanda</u>';
+//         $nilai = 100;
+//         return view('mahasiswa',compact('nama','nilai'));
+//     });
+
+Route::get('/mahasiswa',function(){
+    $nama ='Rizki Wanda Putra';
+    $nilai = [80,90,45,75,150];
+    return view('mahasiswa',compact('nama','nilai'));
 });
