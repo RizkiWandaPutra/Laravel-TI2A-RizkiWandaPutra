@@ -198,8 +198,17 @@ Route::get('/', function () {
 //         return view('mahasiswa',compact('nama','nilai'));
 //     });
 
-Route::get('/mahasiswa',function(){
-    $nama ='Rizki Wanda Putra';
-    $nilai = [80,90,45,75,150];
-    return view('mahasiswa',compact('nama','nilai'));
-});
+// Route::get('/mahasiswa',function(){
+//     $nama ='Rizki Wanda Putra';
+//     $nilai = [80,90,45,75,150];
+//     return view('mahasiswa',compact('nama','nilai'));
+// });
+
+Route::get('/mahasiswa', function(){ 
+    $mahasiswa01 = "Indra Kenz", 
+    $mahasiswa02 = "Doni Salmanan", 
+    $mahasiswa03 = "Ulfi Rizkia", 
+    $mahasiswa04 = "Deliana Putri" 
+    return view('kampus.mahasiswa', compact("mahasiswa01", 
+    "mahasiswa02", "mahasiswa03", "mahasiswa04"));
+ }); 
