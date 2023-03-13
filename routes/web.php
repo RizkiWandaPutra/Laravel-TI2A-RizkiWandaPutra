@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/hello', function () {
 //     return 'Hello World';
@@ -204,11 +204,31 @@ Route::get('/', function () {
 //     return view('mahasiswa',compact('nama','nilai'));
 // });
 
-Route::get('/mahasiswa', function(){ 
-    $mahasiswa01 = "Indra Kenz", 
-    $mahasiswa02 = "Doni Salmanan", 
-    $mahasiswa03 = "Ulfi Rizkia", 
-    $mahasiswa04 = "Deliana Putri" 
-    return view('kampus.mahasiswa', compact("mahasiswa01", 
-    "mahasiswa02", "mahasiswa03", "mahasiswa04"));
- }); 
+// Route::get('/mahasiswa', function(){ 
+//     $mahasiswa01 = "Indra Kenz", 
+//     $mahasiswa02 = "Doni Salmanan", 
+//     $mahasiswa03 = "Ulfi Rizkia", 
+//     $mahasiswa04 = "Deliana Putri" 
+//     return view('kampus.mahasiswa', compact("mahasiswa01", 
+//     "mahasiswa02", "mahasiswa03", "mahasiswa04"));
+//  }); 
+
+//Layout Blade
+
+Route::get('mahasiswa', function(){
+    $arrMahasiswa = ["Rizki Wanda Putra","David Syahputra","Argya Aziz"];
+    return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+});
+
+Route::get('dosen', function(){
+    $arrDosen = ["Amirullah,SST.,M.KOM","Musta’inul Abdi,S.ST.,M.Kom","Muhammad Khadafi,ST.,MT"];
+    return view('dosen')->with('dosen', $arrDosen);
+});
+
+Route::get('gallery',function(){
+    return view('gallery');
+});
+
+Route::get('admin',function(){
+    return view('admin');
+});

@@ -1,0 +1,1 @@
+<div class="alert alert-warning alert-dismissible fadeshow"></div>
