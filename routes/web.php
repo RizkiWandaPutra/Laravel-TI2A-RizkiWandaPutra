@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -215,20 +216,42 @@ use Illuminate\Support\Facades\Route;
 
 //Layout Blade
 
-Route::get('mahasiswa', function(){
-    $arrMahasiswa = ["Rizki Wanda Putra","David Syahputra","Argya Aziz"];
-    return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
-});
+// Route::get('mahasiswa', function(){
+//     $arrMahasiswa = ["Rizki Wanda Putra","David Syahputra","Argya Aziz"];
+//     return view('mahasiswa')->with('mahasiswa', $arrMahasiswa);
+// });
 
-Route::get('dosen', function(){
-    $arrDosen = ["Amirullah,SST.,M.KOM","Musta’inul Abdi,S.ST.,M.Kom","Muhammad Khadafi,ST.,MT"];
-    return view('dosen')->with('dosen', $arrDosen);
-});
+// Route::get('dosen', function(){
+//     $arrDosen = ["Amirullah,SST.,M.KOM","Musta’inul Abdi,S.ST.,M.Kom","Muhammad Khadafi,ST.,MT"];
+//     return view('dosen')->with('dosen', $arrDosen);
+// });
 
-Route::get('gallery',function(){
-    return view('gallery');
-});
+// Route::get('gallery',function(){
+//     return view('gallery');
+// });
 
-Route::get('admin',function(){
-    return view('admin');
-});
+// Route::get('admin',function(){
+//     return view('admin');
+// });
+
+
+//controller
+// Route::get('/', function () {
+// return view('welcome');
+// });
+
+//membuat controller manual
+// use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\PageController;
+
+// Route::get('/',[PageController::class,'index']);
+// Route::get('/mahasiswa',[PageController::class,'tampil']);
+
+//akses facade
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PageController;
+
+Route::get('/',[App\Http\Controllers\Admin\PageController::class,'index']);
+Route::get('/mahasiswa',[App\Http\Controllers\Admin\PageController::class,'tampil']);
+Route::get('/coba-facade',[PageController::class,'cobaFacade']);
+Route::get('/coba-class',[PageController::class,'cobaClass']);

@@ -1,4 +1,4 @@
-{{-- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
     </footer>
     
 </body>
-</html> --}}
+</html>
 
 {{-- @include('layout.header',['title' => 'Data Dosen'])
 <div class="container text-center mt-3 p-4 bg-white">
