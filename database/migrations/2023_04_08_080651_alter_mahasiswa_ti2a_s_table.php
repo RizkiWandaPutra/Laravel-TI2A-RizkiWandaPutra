@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterMahasiswasTable extends Migration
+class AlterMahasiswaTi2aSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,8 @@ class AlterMahasiswasTable extends Migration
     public function up()
     {
         Schema::table('mahasiswa_ti2a', function (Blueprint $table) {
-            //
+            $table->renameColumn('Nama', 'Nama_Lengkap');
+            $table->dropColumn('ipk');
         });
     }
 
@@ -26,7 +27,8 @@ class AlterMahasiswasTable extends Migration
     public function down()
     {
         Schema::table('mahasiswa_ti2a', function (Blueprint $table) {
-            //
+            $table->renameColumn('Nama_Lengkap', 'Nama');
+            $table->decimal('ipk', 3, 2)->default(1.00);
         });
     }
 }
