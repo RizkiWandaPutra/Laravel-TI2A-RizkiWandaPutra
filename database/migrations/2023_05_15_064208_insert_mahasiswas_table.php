@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMahasiswaTi2aSTable extends Migration
+class InsertMahasiswasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateMahasiswaTi2aSTable extends Migration
      */
     public function up()
     {
-        Schema::create('mahasiswa_ti2a', function (Blueprint $table) {
+        Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
-            // $table->timestamps();
-            $table->string('NIM');
-            $table->string('Nama');
-            $table->string('Alamat');
-            $table->decimal('ipk',3,2)->default(1.00);
+            $table->timestamps();
         });
     }
 
@@ -30,6 +26,6 @@ class CreateMahasiswaTi2aSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mahasiswa_ti2a');
+        Schema::dropIfExists('mahasiswas');
     }
 }
