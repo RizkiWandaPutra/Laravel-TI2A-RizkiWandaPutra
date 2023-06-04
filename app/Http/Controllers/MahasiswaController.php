@@ -5,19 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mahasiswa;
 
-        //     class MahasiswaController extends Controller
-        //     {
-        //     public function massAssignment(){
-        //     Mahasiswa::create(
-        //     [
-        //         'nim' => '19021044',
-        //         'nama' => 'Budi',
-        //         'tanggal_lahir' => '2000-08-22',
-        //         'ipk' => 2.5,
-        //     ]
-        //     );
-        // return "Berhasil di proses";
-        // }
+            class MahasiswaController extends Controller
+            {
+            public function massAssignment(){
+            Mahasiswa::create(
+            [
+                'nim' => '1211314344124',
+                'nama' => 'wawan',
+                'tanggal_lahir' => '2000-08-22',
+                'ipk' => 2.5,
+            ]
+            );
+        return "Berhasil di proses";
+        }
 
         // class MahasiswaController extends Controller
         // {
@@ -51,14 +51,14 @@ use App\Models\Mahasiswa;
         // dump($mahasiswa3);
         // }
 
-        class MahasiswaController extends Controller
-        {
-        public function update(){
-        $mahasiswa = Mahasiswa::find(1);
-        $mahasiswa->tanggal_lahir = '2003-05-07';
-        $mahasiswa->ipk = 3.0;
-        $mahasiswa->save();
-        dump($mahasiswa);
-        }
+        // class MahasiswaController extends Controller
+        // {
+        // public function update(){
+        // $mahasiswa = Mahasiswa::find(1);
+        // $mahasiswa->tanggal_lahir = '2003-05-07';
+        // $mahasiswa->ipk = 3.0;
+        // $mahasiswa->save();
+        // dump($mahasiswa);
+        // }
 
     }        
